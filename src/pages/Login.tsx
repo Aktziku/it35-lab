@@ -19,9 +19,6 @@ import {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonButtons slot='start'>
-              <IonMenuButton></IonMenuButton>
-            </IonButtons>
             <IonTitle>Login</IonTitle>
           </IonToolbar>
         </IonHeader>

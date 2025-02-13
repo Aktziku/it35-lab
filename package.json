@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage":"https//Aktziku.github.io/it35-lab/",
+  "homepage":"https//aktziku.github.io/it35-lab/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
