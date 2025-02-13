@@ -10,6 +10,7 @@ import {
       IonMenuToggle, 
       IonPage, 
       IonRouterLink, 
+      IonRouterOutlet, 
       IonSplitPane, 
       IonTitle, 
       IonToolbar 
@@ -59,11 +60,14 @@ import {
         </IonContent>
         </IonMenu>
 
-        <IonRouterLink id="main">
+        <IonRouterOutlet id="main">
           <Route exact path="/it35-lab/app/home" component={Home} />
           <Route exact path="/it35-lab/app/about" component={About} />
           <Route exact path="/it35-lab/app/details" component={Details} />
-        </IonRouterLink>
+          <Route exact path="/it35-lab/app">
+                <Redirect to="/it35-lab/app/home"/>
+          </Route>
+        </IonRouterOutlet>
         </IonSplitPane>
       </IonPage>
     );
