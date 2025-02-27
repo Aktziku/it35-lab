@@ -3,6 +3,9 @@ import {
     IonButtons,
       IonContent, 
       IonHeader, 
+      IonInput, 
+      IonInputPasswordToggle, 
+      IonItem, 
       IonMenuButton, 
       IonPage, 
       IonTitle, 
@@ -22,6 +25,15 @@ import {
             <IonTitle>Login</IonTitle>
           </IonToolbar>
         </IonHeader>
+
+        <IonItem>
+        <IonInput label="Email" type="email" placeholder="Input Your Email"></IonInput>
+      </IonItem>
+
+        <IonInput type="password" label="Password" value="" placeholder="Password">
+      <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+    </IonInput>
+
         <IonContent className='ion-padding'>
         <IonButton onClick={() => doLogin()} expand="full">
             Login    
