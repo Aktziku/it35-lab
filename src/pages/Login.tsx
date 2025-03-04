@@ -26,6 +26,9 @@ import {
           </IonToolbar>
         </IonHeader>
 
+
+
+        <IonContent className='ion-padding'>
         <IonItem>
         <IonInput label="Email" type="email" placeholder="Input Your Email"></IonInput>
       </IonItem>
@@ -34,7 +37,6 @@ import {
       <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
     </IonInput>
 
-        <IonContent className='ion-padding'>
         <IonButton onClick={() => doLogin()} expand="full">
             Login    
             </IonButton>
