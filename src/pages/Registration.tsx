@@ -1,48 +1,52 @@
 import React, { useState } from 'react';
 import { 
-    IonButton,
+    IonButtons,
     IonContent, 
     IonHeader, 
     IonInput, 
-    IonInputPasswordToggle, 
     IonItem, 
     IonList, 
+    IonMenuButton, 
     IonPage, 
     IonTitle, 
-    IonToast, 
     IonToolbar, 
-    useIonRouter
+    IonButton,
+    IonToast,
+    useIonRouter,
+    IonInputPasswordToggle
 } from '@ionic/react';
 
-const Login: React.FC = () => {
+const Registration: React.FC = () => {
     const navigation = useIonRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showToast, setShowToast] = useState(false);
     const [toastMessage, setToastMessage] = useState('');
 
-    const doLogin = () => {
-        const storedPassword = localStorage.getItem(email);
-        if (storedPassword && storedPassword === password) {
-            navigation.push('/it35-lab/app', 'forward', 'replace');
-        } else {
-            setToastMessage('Invalid email or password');
-            setShowToast(true);
-        }
-    };
-
     const doRegister = () => {
-        navigation.push('/it35-lab/register', 'forward', 'replace');
+        if (localStorage.getItem(email)) {
+            setToastMessage('User already exists');
+            setShowToast(true);
+        } else {
+            localStorage.setItem(email, password);
+            setToastMessage('Registration successful');
+            setShowToast(true);
+            setTimeout(() => {
+                navigation.push('/it35-lab', 'forward', 'replace');
+            }, 2000); 
+        }
     };
 
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Login</IonTitle>
+                    <IonButtons slot='start'>
+                        <IonMenuButton></IonMenuButton>
+                    </IonButtons>
+                    <IonTitle>Register</IonTitle>
                 </IonToolbar>
             </IonHeader>
-
             <IonContent className='ion-padding ion-text-center'>
                 <IonList className='ion-margin-bottom'>
                     <IonItem className='ion-no-margin'>
@@ -65,15 +69,9 @@ const Login: React.FC = () => {
                         </IonInput>
                     </IonItem>
                 </IonList>
-
-                <IonButton onClick={doLogin} expand="full">
-                    Login
-                </IonButton>
-                or
-                <IonButton onClick={doRegister} expand="full" color="secondary">
+                <IonButton onClick={doRegister} expand="full">
                     Register
                 </IonButton>
-
                 <IonToast
                     isOpen={showToast}
                     onDidDismiss={() => setShowToast(false)}
@@ -85,4 +83,4 @@ const Login: React.FC = () => {
     );
 };
 
-export default Login;
+export default Registration;
