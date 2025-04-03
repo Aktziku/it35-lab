@@ -44,9 +44,9 @@ import {
         <IonContent className="ion-padding ion-text-center" fullscreen>
           {/* App Branding */}
           <div style={{ textAlign: 'center', marginTop: '60px' }}>
-            <h1 style={{ color: '#BE1E2D', fontSize: '36px', fontWeight: 'bold' }}>StrawHats Registration</h1>
+            <h1 style={{ color: '#BE1E2D', fontSize: '36px', fontWeight: 'bold' }}>Registration</h1>
             <IonText color="medium">
-              <p>Welcome aboard. Start your One Piece journey!</p>
+              <p>Welcome </p>
             </IonText>
           </div>
   
