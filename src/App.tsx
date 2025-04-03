@@ -36,22 +36,21 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Register from './pages/Registration';
+import Registration from './pages/Registration';
 
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/it35-lab" component={Login} />
-        <Route  path="/it35-lab/app" component={Menu} />
-        <Route path="/it35-lab/register" component={Register} exact={true} />
-  
-      
+  <IonReactRouter>
+    <IonRouterOutlet>
+    <Route exact path="/it35-lab" component={Login} />
+    <Route exact path="/Signup" component={Registration} /> 
+    <Route path="/it35-lab/app" component={Menu} />
       </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  </IonReactRouter>
+</IonApp>
 );
 
 export default App;
