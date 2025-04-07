@@ -35,7 +35,6 @@ import './theme/variables.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
-import Register from './pages/Registration';
 import Registration from './pages/Registration';
 
 
@@ -46,7 +45,7 @@ const App: React.FC = () => (
   <IonReactRouter>
     <IonRouterOutlet>
     <Route exact path="/it35-lab" component={Login} />
-    <Route exact path="/Signup" component={Registration} /> 
+    <Route exact path="/it35-lab/Registration" component={Registration} /> 
     <Route path="/it35-lab/app" component={Menu} />
       </IonRouterOutlet>
   </IonReactRouter>
