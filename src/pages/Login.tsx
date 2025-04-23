@@ -70,11 +70,16 @@ const Login: React.FC = () => {
               overflow: 'hidden' 
             }}
           >
-            <IonIcon 
-              icon={logoIonic}
-              color='primary'
-              style={{ fontSize: '120px', color: '#6c757d' }} 
+             <img 
+            src="https://cdn.vectorstock.com/i/500p/81/72/monogram-l-logo-letter-overlapping-thin-line-vector-5868172.jpg"
+            alt="Logo"
+            style={{ 
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+              }}  
             />
+
           </IonAvatar>
           <h1 style={{
             display: 'flex',
