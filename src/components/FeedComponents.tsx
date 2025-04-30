@@ -199,11 +199,13 @@ const createPost = async () => {
                 </IonCardHeader>
                 <IonCardContent>
                   <IonInput
+                    id="new-post-content"
                     value={postContent}
                     onIonChange={e => setPostContent(e.detail.value!)}
                     placeholder="Write a post..."
                   />
                   <input
+                    id="post-image-upload"
                     type="file"
                     accept="image/*"
                     onChange={(e) => {
@@ -322,6 +324,7 @@ const createPost = async () => {
         </IonHeader>
         <IonContent>
           <IonInput
+            id="edit-post-content"
             value={postContent}
             onIonChange={e => setPostContent(e.detail.value!)}
             placeholder="Edit your post..."
